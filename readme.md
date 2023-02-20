@@ -1,15 +1,24 @@
 #REQUIREMENTS I NEEDED TO INSTALL TO WORK ON MY LINUX MINT:
-
+```
 sudo apt install openjdk-11-jdk
+```
+```
 export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
-sudo apt install maven
-mvn clean install
-mvn clean install jetty:run
-
+```
 #SELECT WITH
-
+``` 
 sudo update-alternatives --config java
-
+```
+#After
+```
+sudo apt install maven
+```
+```
+mvn clean install
+```
+```
+mvn clean install jetty:run
+```
 
 ## Containerising Pet Clinic app using Docker
 
