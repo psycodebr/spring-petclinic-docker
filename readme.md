@@ -1,3 +1,14 @@
+#REQUIREMENTS I NEEDED TO INSTALL TO WORK ON MY LINUX MINT:
+
+sudo apt install openjdk-11-jdk
+export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
+sudo apt install maven
+mvn clean install
+mvn clean install jetty:run
+
+#SELECT WITH
+
+sudo update-alternatives --config java
 
 
 ## Containerising Pet Clinic app using Docker
@@ -50,25 +61,29 @@ Or you can run it from Maven directly using the Spring Boot Maven plugin. If you
 ## Building a Container
 
 ```
- docker build -t petclinic-app . -f Dockerfile
+ docker build --tag petclinic-app .
 ```
 
 ## Multi-Stage Build
 
 ```
- docker build -t petclinic-app . -f Dockerfile.multi
+ DOCKER_BUILDKIT=0 docker build -t petclinic-app --target development .
 ```
 
 ## Using Docker Compose
 
 ```
- docker-compose up -d
+docker compose up -d --build
 ```
 
+#Next, let’s test our API endpoint. Run the following curl commands:
+
+``` 
+curl --request GET \ --url http://localhost:8080/vets \ --header 'content-type: application/json'
+```
 
 
 ## References
 
 - [Building PetClinic app using Dockerfile](https://docs.docker.com/language/java/build-images/)
-
 
