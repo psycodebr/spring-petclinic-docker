@@ -16,9 +16,6 @@ sudo apt install maven
 ```
 mvn clean install
 ```
-```
-mvn clean install jetty:run
-```
 
 ## Containerising Pet Clinic app using Docker
 
