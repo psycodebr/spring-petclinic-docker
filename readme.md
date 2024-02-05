@@ -92,4 +92,3 @@ curl --request GET \ --url http://localhost:8080/vets \ --header 'content-type: 
 ## References
 
 - [Building PetClinic app using Dockerfile](https://docs.docker.com/language/java/build-images/)
-
